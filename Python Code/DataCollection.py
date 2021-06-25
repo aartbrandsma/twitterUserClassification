@@ -1,5 +1,4 @@
 import os
-
 import tweepy
 import tweepy as tw
 import pandas as pd
@@ -17,4 +16,6 @@ auth.get_access_token(user_pin_input)
 
 api = tweepy.API(auth)
 
-api.get_user
+pd.DataFrame()
+for tweet in tweepy.Cursor(api.search, q='aart').items(10):
+    print(tweet.text)
